@@ -1,3 +1,4 @@
+window.onload = function (){
 //! 搜尋框淡入淡出
 const element = document.getElementById("options");
 const search = document.getElementById("search-outter");
@@ -26,7 +27,6 @@ function animationEndHandler() {
 
   if(search.style.opacity == 0){
     search.style.display = "none";
-    
   }
 }
 // end of 搜尋框淡入淡出
@@ -39,7 +39,7 @@ let nav_ul = document.querySelector(".nav-ul");
 let liTag;
 let timer;
 lightBox.style =
-  "position:absolute; background-color:#632c28; transition:.2s; z-index:999; color:white; font-weight:700; border-radius:5px 20px 0 0; padding:0px 15px 0px 5px; ";
+  "position:absolute; background-color:#632c28; transition:.2s; z-index:999; color:white; font-weight:700; border-radius:5px 20px 0 0; padding:0px 15px 0px 5px;cursor:pointer; ";
 
 nav_ul.appendChild(lightBox);
 initActive();
@@ -81,4 +81,7 @@ function setLightStyle(target) {
   lightBox.innerText = liTag.innerText;
   lightBox.style.top = top + "px";
   lightBox.style.left = left + "px";
+}
+
+
 }
